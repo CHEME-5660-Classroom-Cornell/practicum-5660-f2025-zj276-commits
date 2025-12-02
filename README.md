@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/CNR6JdcY)
 # Practicum Problem 5660 Fall 2025
 In this problem you will evaluate a strategy for portfolio reallocation where we use a binary Bernoulli bandit model to rank assets under different assumptions about market moods and investor preferences. This is an extension of the material covered in Lecture 14a on Risk-Aware Portfolio Management using Contextual Bandits.
 
