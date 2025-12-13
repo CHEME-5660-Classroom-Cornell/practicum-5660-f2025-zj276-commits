@@ -20,14 +20,14 @@ function build(modeltype::Type{MyTickerPickerSIMRiskAwareWorldModel}, data::Name
     model = modeltype(); # build an empty model
 
     # Fields required in data NamedTuple:
-    # tickers::Array{String,1}
-    # risk_free_rate::Float64
-    # world::Function
-    # Δt::Float64
-    # Ḡₘ::Float64 # expected excess market return (market factor)
-    # parameters::Dict{String, NamedTuple} # single index model parameters for each ticker
-    # buffersize::Int64 # how many days to use in the buffer
-    # risk::Dict{String, Float64}
+     tickers::Array{String,1}
+     risk_free_rate::Float64
+     world::Function
+     Δt::Float64
+     Ḡₘ::Float64 # expected excess market return (market factor)
+     parameters::Dict{String, NamedTuple} # single index model parameters for each ticker
+     buffersize::Int64 # how many days to use in the buffer
+     risk::Dict{String, Float64}
 
     # set the data on the object
     model.tickers = data.tickers;
@@ -80,14 +80,14 @@ function build(modeltype::Type{MyInvestorMarketContextModel}, data::NamedTuple):
     model = modeltype(); # build an empty model
 
     # Fields required in data NamedTuple:
-    # B::Float64 # total budget for investment (in USD)
-    # tickers::Array{String,1} # array of ticker symbols
-    # marketdata::Dict{String, DataFrame} # market data for the tickers
-    # preferences::Dict{Symbol, DataFrame} # ticker-picker preferences
-    # Ḡₘ::Float64 # expected excess market return (market factor)
-    # risk_free_rate::Float64 # risk-free rate of return
-    # singleindexmodel_parameters::Dict{String, NamedTuple} # single index model parameters for each ticker
-    # ξ::Float64 # weight of the ticker-picker preference in the investor context model
+     B::Float64 # total budget for investment (in USD)
+     tickers::Array{String,1} # array of ticker symbols
+     marketdata::Dict{String, DataFrame} # market data for the tickers
+     preferences::Dict{Symbol, DataFrame} # ticker-picker preferences
+     Ḡₘ::Float64 # expected excess market return (market factor)
+     risk_free_rate::Float64 # risk-free rate of return
+     singleindexmodel_parameters::Dict{String, NamedTuple} # single index model parameters for each ticker
+     ξ::Float64 # weight of the ticker-picker preference in the investor context model
 
     # set the data on the object
     model.B = data.B;

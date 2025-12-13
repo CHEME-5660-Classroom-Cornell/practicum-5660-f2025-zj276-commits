@@ -39,7 +39,7 @@ using Images
 using Test
 
 # Set the random seed for reproducibility
-# Random.seed!(1234);
+ Random.seed!(1234);
 
 # load my codes -
 include(joinpath(_PATH_TO_SRC, "Types.jl"));
