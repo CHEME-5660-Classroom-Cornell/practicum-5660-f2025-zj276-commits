@@ -79,15 +79,15 @@ function build(modeltype::Type{MyInvestorMarketContextModel}, data::NamedTuple):
     # initialize -
     model = modeltype(); # build an empty model
 
-    # Fields required in data NamedTuple:
-     B::Float64 # total budget for investment (in USD)
-     tickers::Array{String,1} # array of ticker symbols
-     marketdata::Dict{String, DataFrame} # market data for the tickers
-     preferences::Dict{Symbol, DataFrame} # ticker-picker preferences
-     Ḡₘ::Float64 # expected excess market return (market factor)
-     risk_free_rate::Float64 # risk-free rate of return
-     singleindexmodel_parameters::Dict{String, NamedTuple} # single index model parameters for each ticker
-     ξ::Float64 # weight of the ticker-picker preference in the investor context model
+    # Fields required in data NamedTuple (for reference only):
+     # B::Float64 # total budget for investment (in USD)
+     # tickers::Array{String,1} # array of ticker symbols
+     # marketdata::Dict{String, DataFrame} # market data for the tickers
+     # preferences::Dict{Symbol, DataFrame} # ticker-picker preferences
+     # Ḡₘ::Float64 # expected excess market return (market factor)
+     # risk_free_rate::Float64 # risk-free rate of return
+     # singleindexmodel_parameters::Dict{String, NamedTuple} # single index model parameters for each ticker
+     # ξ::Float64 # weight of the ticker-picker preference in the investor context model
 
     # set the data on the object
     model.B = data.B;
